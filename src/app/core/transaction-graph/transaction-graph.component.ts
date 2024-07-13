@@ -9,7 +9,7 @@ import { allTransaction } from 'src/app/models/Transaction';
     <div class="w-100 text-center">
       <canvas #canvas id="dialogChart"></canvas>
     </div>
-    <button class="btn outline-main" (click)="closeDialog()">Close</button>
+    <button class="btn btn-primary m-3 outline-main" (click)="closeDialog()">Close</button>
   `,
   styleUrls: ['./transaction-graph.component.scss']
 })
