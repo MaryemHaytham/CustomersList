@@ -1,0 +1,41 @@
+<section class="mt-3">
+    <div>
+        <mat-form-field>
+            <mat-label>Filter by Name</mat-label>
+            <input matInput (keyup)="applyFilter($event)" class="w-100">
+          </mat-form-field>
+    </div>
+  
+    <div *ngIf="filteredCustomers.length > 0; else noData">
+      <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+          <mat-cell *matCellDef="let customer"> {{ customer.name }} </mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="totalAmount">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Total Transaction Amount </mat-header-cell>
+          <mat-cell *matCellDef="let customer"> {{ customerTransactionAmounts[customer.id] || 0 }} </mat-cell>
+        </ng-container>
+  
+        <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+          <mat-cell *matCellDef="let customer">
+            <button mat-button color="primary" (click)="selectCustomer(customer.id)">View Transactions</button>
+          </mat-cell>
+        </ng-container>
+  
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+
+      <mat-paginator [length]="totalCount"  [pageSizeOptions]="[5, 10, 25, 100]" (page)="onPageChange($event)">
+    </mat-paginator>
+      
+    </div>
+  
+    <ng-template #noData>
+      <p>No data found.</p>
+    </ng-template>
+  </section>
+  
