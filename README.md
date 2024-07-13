@@ -1,8 +1,8 @@
 # Json Data
 https://drive.google.com/file/d/16KsBMpKyByziQQ7okMBHbcNyjJZzpK1i/view?usp=sharing
 make sure to use this commands to run local:
-npm i -g json-server
-json-server --watch db.json
+### npm i -g json-server
+### json-server --watch db.json
 
 # DEMO
 https://drive.google.com/file/d/1zATCAa1-AQ1mMK_9GlSLCfIIE2uoswIu/view?usp=sharing
