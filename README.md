@@ -7,6 +7,8 @@ make sure to use this commands to run local:
 # DEMO
 https://drive.google.com/file/d/1zATCAa1-AQ1mMK_9GlSLCfIIE2uoswIu/view?usp=sharing
 
+https://drive.google.com/file/d/1CFIusIipb2SuT6_dUNbOaKr4Q2hebAOA/view?usp=sharing
+
 # Deployment Link
 https://customers-list-murex.vercel.app/
 
